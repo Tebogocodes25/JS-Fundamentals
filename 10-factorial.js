@@ -1,4 +1,7 @@
 function factorial(n) {
+    if (isNaN(n) || n < 0) {
+        return "NaN";
+    }
     if (n === 0 || n === 1) {
         return 1;
     }
@@ -6,9 +9,6 @@ function factorial(n) {
 }
 
 const num = parseInt(process.argv[2], 10);
+console.log(factorial(num));
 
-if (!isNaN(num) && num >= 0) {
-    console.log(factorial(num));
-} else {
-    console.log("NaN");
-}
+
