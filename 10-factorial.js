@@ -8,7 +8,13 @@ function factorial(n) {
     return n * factorial(n - 1);
 }
 
-const num = parseInt(process.argv[2], 10);
-console.log(factorial(num));
+const num = process.argv[2]; // Get the argument as a string
+
+if (num === undefined) {
+    console.log("No argument");  // Fix: Handle missing argument explicitly
+} else {
+    console.log(factorial(parseInt(num, 10)));
+}
+
 
 
