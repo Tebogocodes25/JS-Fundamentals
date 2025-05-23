@@ -1,3 +1,4 @@
+
 const x = parseInt(process.argv[2], 10); // Convert argument to an integer
 
 if (isNaN(x) || x <= 0) {
